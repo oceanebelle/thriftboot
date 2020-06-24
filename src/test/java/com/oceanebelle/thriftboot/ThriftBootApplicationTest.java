@@ -1,26 +1,20 @@
-package com.oceanebelle.thriftboot.thriftboot;
+package com.oceanebelle.thriftboot;
 
-import com.oceanebelle.thriftboot.ThriftBootApplication;
 import com.oceanebelle.thriftboot.echo.TEchoService;
-import com.oceanebelle.thriftboot.echo.TInvalidRequestException;
 import com.oceanebelle.thriftboot.echo.TOperation;
 import org.apache.thrift.protocol.TProtocol;
 import org.apache.thrift.protocol.TProtocolFactory;
 import org.apache.thrift.transport.THttpClient;
 import org.apache.thrift.transport.TTransport;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.Assert.assertEquals;
 
-@SpringBootTest(classes = ThriftBootApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ThriftBootApplicationTest {
 
 	@Autowired
